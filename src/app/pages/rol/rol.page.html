@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>rol</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text-center>
+  <ion-list text-center>
+    <ion-item text-center>
+      <img [src]="user.imagen">
+    </ion-item>
+    <ion-item>
+      <h2>{{ user.nombre }}</h2>
+    </ion-item>
+    <ion-item>
+      <p>{{user.email}}</p>
+    </ion-item>
+    <ion-item>
+        <p>{{user.uid}}</p>
+    </ion-item>
+    <ion-item>
+        <p>{{user.provider}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
