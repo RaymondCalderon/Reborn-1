@@ -1,0 +1,17 @@
+<ion-menu side="start" menuId="firstMenu" contentId="mainRouter" >
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+          <ion-item [routerLink]="c.url" *ngFor="let c of appPage">
+              <ion-icon [name]=c.icono slot="start"></ion-icon>
+              <ion-label>
+                {{c.titulo}}
+              </ion-label>
+            </ion-item >
+      </ion-list>
+    </ion-content>
+  </ion-menu>

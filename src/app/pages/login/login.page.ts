@@ -2,30 +2,30 @@ import { Component, OnInit } from '@angular/core';
 // import { NavController } from 'ionic-angular';
 
 import { AngularFireAuth } from '@angular/fire/auth';
-import firebase from 'firebase/app';
+import * as firebase from 'firebase';
 import { NavController } from '@ionic/angular';
 import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  styleUrls: ['./login.page.scss']
 })
 export class LoginPage implements OnInit {
-
   constructor(
-    // public navCtrl: NavController, 
+    // public navCtrl: NavController,
     private afAuth: AngularFireAuth,
     public usuarioProv: UsuarioService,
-    private navCtrl: NavController,
-  ) { }
+    private navCtrl: NavController
+  ) {}
 
   signInWithFacebook() {
     this.afAuth.auth
       .signInWithPopup(new firebase.auth.FacebookAuthProvider())
-      .then(res => {console.log(res);
+      .then(res => {
+        console.log(res);
 
-        let user = res.user;
+        const user = res.user;
 
         this.usuarioProv.cargarUsuario(
           user.displayName,
@@ -35,15 +35,11 @@ export class LoginPage implements OnInit {
           'facebook'
         );
         this.navCtrl.navigateRoot('/rol');
-        console.log("ola"+ user);
+        console.log('ola' + user);
       });
 
-
-      // var user = res.user;
-
+    // var user = res.user;
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
