@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { NavController } from 'ionic-angular';
 
 import { AngularFireAuth } from '@angular/fire/auth';
-import firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 import { NavController } from '@ionic/angular';
 import { UsuarioService } from '../../services/usuario.service';
 
