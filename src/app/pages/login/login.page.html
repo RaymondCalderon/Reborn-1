@@ -14,7 +14,7 @@
   <ion-row>
     <ion-col>
 
-        <ion-button color="" icon-left block> 
+        <ion-button color="" icon-left block (click)="signInWithGoogle()"> 
           <ion-icon name="logo-google"></ion-icon>
           Google
         </ion-button>
@@ -23,6 +23,10 @@
           <ion-icon name="logo-facebook"></ion-icon>
           Facebook
         </ion-button>
+
+        <a color="" routerLink="/register" icon-left block> 
+          registrarte 
+        </a>
 
     </ion-col>
   </ion-row>

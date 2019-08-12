@@ -16,6 +16,7 @@ import {
   AngularFireDatabase
 } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 import { ComponentsModule } from './components/components.module';
 
@@ -30,6 +31,7 @@ export const firebaseConfig = {
 };
 
 @NgModule({
+
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
@@ -44,8 +46,11 @@ export const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFirestore,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
+
+
 })
 export class AppModule {}

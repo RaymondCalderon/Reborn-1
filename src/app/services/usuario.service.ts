@@ -15,7 +15,9 @@ export class UsuarioService {
     email: string,
     imagen: string,
     uid: string,
+
     provider: string) {
+
 
       this.usuario.nombre = nombre;
       this.usuario.email = email;
