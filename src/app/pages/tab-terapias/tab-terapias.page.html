@@ -1,7 +1,27 @@
-<app-header titulo="Terapias">
+<app-header titulo="Terapia de Rodilla">
   </app-header>
 
-<ion-content>
+  <!-- <ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Terapia de rodilla
+        </ion-title>
+    </ion-toolbar>
+</ion-header> -->
 
+<ion-content>
+    <div class="ion-padding">
+        <ion-card *ngFor="let video of videos">
+            <ion-card-header>
+                <h4>Terapias</h4>
+            </ion-card-header>
+            <ion-card-content>
+                {{video.title}}
+                <iframe width="100%" height="350" [src]="sanitizer(vid)" frameborder="0" allowfullscreen>
+
+                </iframe>
+            </ion-card-content>
+        </ion-card>
+    </div>
 </ion-content>
-<app-tabs></app-tabs>
+<!-- <app-tabs></app-tabs> -->

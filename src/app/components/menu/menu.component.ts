@@ -22,6 +22,11 @@ export class MenuComponent implements OnInit {
       titulo: 'Graficas',
       url: 'tab-graficas',
       icono: 'stats'
+    },
+    {
+      titulo: 'Perfil Especialista',
+      url: 'perfil-medico',
+      icono: 'hand'
     }
   ];
   constructor() { }

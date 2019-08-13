@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-tab-terapias',
@@ -7,8 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabTerapiasPage implements OnInit {
 
-  constructor() { }
+  vid = 'https://www.youtube.com/embed/LOe_wcdmZ38';
+  videos: any[] = [
+    {
+      title: 'Terapia 1',
+      url: 'https://www.youtube.com/embed/LOe_wcdmZ38',
+    },
+    {
+      title: 'Terapia 2',
+      url: 'https://www.youtube.com/embed/LOe_wcdmZ38',
+    }
+  ];
+  constructor(private dom: DomSanitizer) {
 
+  }
+  sanitizer(vid) {
+    return this.dom.bypassSecurityTrustResourceUrl(vid);
+  }
   ngOnInit() {
   }
 
