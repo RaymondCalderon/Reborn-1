@@ -11,10 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 // import { LoginPage } from './pages/login/login.page';
 // Firebase
 import { AngularFireModule } from '@angular/fire';
-import {
-  AngularFireDatabaseModule,
-  AngularFireDatabase
-} from '@angular/fire/database';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 
