@@ -15,19 +15,18 @@ import { Geolocation } from "@ionic-native/geolocation/ngx";
 declare var google;
 
 @Component({
-  selector: 'app-tab-gps',
-  templateUrl: './tab-gps.page.html',
-  styleUrls: ['./tab-gps.page.scss'],
+  selector: "app-tab-gps",
+  templateUrl: "./tab-gps.page.html",
+  styleUrls: ["./tab-gps.page.scss"]
 })
 export class TabGpsPage implements OnInit, AfterViewInit {
-
-  @ViewChild('mapElement', { static: false }) mapNativeElement: ElementRef;
+  @ViewChild("mapElement", { static: false }) mapNativeElement: ElementRef;
   directionsService = new google.maps.DirectionsService();
   directionsDisplay = new google.maps.DirectionsRenderer({
     suppressMarkers: true,
-   polylineOptions: {
-     strokeColor: 'green'
-  }
+    polylineOptions: {
+      strokeColor: "green"
+    }
   });
   directionForm: FormGroup;
   map;
@@ -42,10 +41,9 @@ export class TabGpsPage implements OnInit, AfterViewInit {
 
   constructor(private fb: FormBuilder, private geolocation: Geolocation) {
     this.createDirectionForm();
-   }
-
-  ngOnInit() {
   }
+
+  ngOnInit() {}
 
   createDirectionForm() {
     this.directionForm = this.fb.group({
@@ -93,7 +91,7 @@ export class TabGpsPage implements OnInit, AfterViewInit {
         origin: this.currentLocation,
         destination: this.destination.text,
         travelMode: google.maps.DirectionsTravelMode.DRIVING,
-        provideRouteAlternatives: true,
+        provideRouteAlternatives: true
       },
       (response, status) => {
         if (status === "OK") {
@@ -104,6 +102,5 @@ export class TabGpsPage implements OnInit, AfterViewInit {
         }
       }
     );
-
-}
+  }
 }
