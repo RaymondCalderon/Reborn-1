@@ -10,7 +10,8 @@ export class TabsService {
 
   hideTabBarPages = [
     'login',
-    'rol'
+    'rol',
+    'perfil-user'
   ];
   routeParamPages: string[] = [
     'product-details',

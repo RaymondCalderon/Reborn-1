@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'sector-lesion', loadChildren: './pages/sector-lesion/sector-lesion.module#SectorLesionPageModule' },
   { path: 'rol', loadChildren: './pages/rol/rol.module#RolPageModule' },
   { path: 'register-medico', loadChildren: './pages/register-medico/register-medico.module#RegisterMedicoPageModule' },
-  { path: 'perfil-user', loadChildren: './pages/perfil-user/perfil-user.module#PerfilUserPageModule' },
+  { path: 'perfil-user', loadChildren: './pages/perfil-user/perfil-user.module#PerfilUserPageModule' },  { path: 'tab-gps', loadChildren: './pages/tab-gps/tab-gps.module#TabGpsPageModule' },
+
 
 ];
 

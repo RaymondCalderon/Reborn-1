@@ -27,6 +27,11 @@ export class MenuComponent implements OnInit {
       titulo: 'Perfil Especialista',
       url: 'perfil-medico',
       icono: 'hand'
+    },
+    {
+      titulo: 'Ubicación',
+      url: 'tab-gps',
+      icono: 'pin'
     }
   ];
   constructor() { }
