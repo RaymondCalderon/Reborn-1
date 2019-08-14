@@ -1,5 +1,7 @@
 {
   "name": "Reborn",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -17,6 +17,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { ComponentsModule } from './components/components.module';
 import { TabsService } from './core/tabs.service';
+import { Geolocation } from "@ionic-native/geolocation/ngx";
+import { FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDcurmjOtRoXaIdx-vgAjQspFR5QYXl9io',
@@ -39,14 +41,17 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    ComponentsModule
+    ComponentsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AngularFirestore,
     TabsService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Geolocation
   ],
   bootstrap: [AppComponent]
 

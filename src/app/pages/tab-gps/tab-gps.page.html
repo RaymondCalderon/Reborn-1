@@ -1,8 +1,11 @@
-<app-header titulo="Geolocalización">
-
-</app-header>
-
+<app-header titulo="Geolocalización"> </app-header>
 
 <ion-content>
-
+    
+    <ion-item>
+        <ion-label position="floating">Destination</ion-label>
+        <ion-input type="text" [(ngModel)]="destination.text"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" (click)="calculateAndDisplayRoute(destination)">Get Direction</ion-button>
+    <div style="height: 100%;" #mapElement class="map"></div>
 </ion-content>
