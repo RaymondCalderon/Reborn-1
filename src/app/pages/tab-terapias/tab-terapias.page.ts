@@ -9,14 +9,15 @@ import { DomSanitizer} from '@angular/platform-browser';
 export class TabTerapiasPage implements OnInit {
 
   vid = 'https://www.youtube.com/embed/LOe_wcdmZ38';
-  videos: any[] = [
+  url = '';
+  videos = [
     {
       title: 'Terapia 1',
-      url: 'https://www.youtube.com/embed/LOe_wcdmZ38',
+      url: 'https://www.youtube.com/embed/LOe_wcdmZ38'
     },
     {
       title: 'Terapia 2',
-      url: 'https://www.youtube.com/embed/LOe_wcdmZ38',
+      url: 'https://www.youtube.com/embed/LOe_wcdmZ38'
     }
   ];
   constructor(private dom: DomSanitizer) {
@@ -25,6 +26,7 @@ export class TabTerapiasPage implements OnInit {
   sanitizer(vid) {
     return this.dom.bypassSecurityTrustResourceUrl(vid);
   }
+
   ngOnInit() {
   }
 

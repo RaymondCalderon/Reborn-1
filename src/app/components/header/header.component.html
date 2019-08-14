@@ -1,16 +1,18 @@
 <ion-header>
 	<ion-toolbar>
 
-			<ion-buttons slot="start">
-				<ion-menu-button></ion-menu-button>
-			</ion-buttons>
-
-		<ion-buttons slot="end">
-			<!-- <ion-avatar> -->
-				<!-- <img src="assets/avatar.jpg" alt="avatar"> -->
-				<ion-icon slot="icon-only" name="contact"></ion-icon>
-			<!-- </ion-avatar> -->
+		<ion-buttons slot="start" *ngIf="titulo=='Reborn'">
+			<ion-menu-button></ion-menu-button>
 		</ion-buttons>
+
+		<ion-buttons slot="start">
+			<ion-back-button class="backButton" text="" defaultHref="home" *ngIf="titulo != 'Reborn' "></ion-back-button>
+		</ion-buttons>
+		
+		<ion-buttons slot="end" routerLink="/perfil-user">
+			<ion-icon slot="icon-only" name="contact"></ion-icon>
+		</ion-buttons>
+
 		<ion-title text-capitalize>{{titulo}}</ion-title>
 	</ion-toolbar>
 </ion-header>

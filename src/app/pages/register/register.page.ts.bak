@@ -37,7 +37,7 @@ export class RegisterPage implements OnInit {
       const res = await this.afAuth.auth.createUserWithEmailAndPassword(username, password)
       console.log(res)
       // this.afs.doc(`user/${res.user.uid}`).set(JSON.parse(JSON.stringify(username, password)))
-      this.showAlert("¡Registro Exitoso!", "Inicia Sesión para ver todo el contenido")
+      this.showAlert("Bienvenido/a", "¡Registro Exitoso!")
       this.router.navigate(['/login'])
     }catch(error){
       console.dir(error)

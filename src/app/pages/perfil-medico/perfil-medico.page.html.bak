@@ -1,9 +1,8 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>perfilMedico</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Perfil Médico">
+  </app-header>
 
 <ion-content>
 
 </ion-content>
+
+<!-- <app-tabs></app-tabs> -->

@@ -1,3 +1,7 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+ <ion-app>
+
+   <app-menu></app-menu>
+
+  <ion-router-outlet id="mainRouter"></ion-router-outlet>
+  <app-tabs tabsHideOnSubPages="true"></app-tabs>
 </ion-app>

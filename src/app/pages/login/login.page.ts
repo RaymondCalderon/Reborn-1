@@ -79,7 +79,7 @@ export class LoginPage implements OnInit {
         this.afs
           .doc(`user/${res.user.uid}`)
           .set(JSON.parse(JSON.stringify(Datauser)));
-        this.navCtrl.navigateRoot('/rol');
+        this.navCtrl.navigateRoot('/home');
       });
   }
 
