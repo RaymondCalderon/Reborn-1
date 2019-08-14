@@ -16,6 +16,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { ComponentsModule } from './components/components.module';
+import { TabsService } from './core/tabs.service';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDcurmjOtRoXaIdx-vgAjQspFR5QYXl9io',
@@ -44,6 +45,7 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     AngularFirestore,
+    TabsService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
